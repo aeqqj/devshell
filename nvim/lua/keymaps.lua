@@ -1,8 +1,9 @@
+local opts = { noremap = false, silent = false }
+
 vim.g.mapleader = " "
 
 -- source
 vim.keymap.set('n', '<leader>u', ':update<CR> :source<CR>')
-
 -- oil
 vim.keymap.set('n', '<leader>e', ':Oil<CR>')
 
@@ -23,11 +24,15 @@ vim.keymap.set('n', '<leader>lf', vim.lsp.buf.format)
 vim.keymap.set('n', 'x', '"_x')
 
 -- clear highlights (search)
-vim.keymap.set("n", "<leader>ch", ":nohl<CR>" )
+vim.keymap.set("n", "<leader>ch", ":nohl<CR>")
 
 -- center after search
 vim.keymap.set('n', 'n', 'nzzzv', opts)
 vim.keymap.set('n', 'N', 'Nzzzv', opts)
 
--- diagnostic
-vim.keymap.set('n', '<leader>d', function () vim.diagnostic.open_float() end, opts)
+-- zk
+vim.api.nvim_set_keymap("n", "<leader>zn", ":ZkNew { title = vim.fn.input('Title: ') }<CR>", opts)
+vim.api.nvim_set_keymap("n", "<leader>zo", "<Cmd>ZkNotes { sort = { 'modified' } }<CR>", opts)
+vim.api.nvim_set_keymap("n", "<leader>zt", "<Cmd>ZkTags<CR>", opts)
+
+
