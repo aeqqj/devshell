@@ -18,7 +18,9 @@ vim.keymap.set('n', '<leader>h', ':Pick help<CR>')
 vim.keymap.set('n', 'm', ':Mason<CR>')
 
 -- format
-vim.keymap.set('n', '<leader>lf', vim.lsp.buf.format)
+vim.keymap.set('n', '<leader>lf', function()
+    conform.format({ async = true, lsp_fallback = true })
+end)
 
 -- delete without saving
 vim.keymap.set('n', 'x', '"_x')
@@ -34,5 +36,3 @@ vim.keymap.set('n', 'N', 'Nzzzv', opts)
 vim.api.nvim_set_keymap("n", "<leader>zn", ":ZkNew { title = vim.fn.input('Title: ') }<CR>", opts)
 vim.api.nvim_set_keymap("n", "<leader>zo", "<Cmd>ZkNotes { sort = { 'modified' } }<CR>", opts)
 vim.api.nvim_set_keymap("n", "<leader>zt", "<Cmd>ZkTags<CR>", opts)
-
-
