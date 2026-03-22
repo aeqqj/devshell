@@ -27,13 +27,6 @@ require('conform').setup({
         ["*"] = { "codespell" },
         ["_"] = { "trim_whitespace" },
         lua = { "stylua" },
-        dart = { "dart_format" },
-    },
-    formatters = {
-        dart_format = {
-            command = "dart",
-            args = { "format", "$FILENAME" },
-        },
     },
 })
 require('oil').setup()
