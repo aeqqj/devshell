@@ -19,7 +19,7 @@ vim.keymap.set('n', 'm', ':Mason<CR>')
 
 -- format
 vim.keymap.set('n', '<leader>lf', function()
-    conform.format({ async = true, lsp_fallback = true })
+    require('conform').format({ async = true, lsp_fallback = true })
 end)
 
 -- delete without saving
