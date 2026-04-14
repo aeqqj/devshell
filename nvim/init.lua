@@ -24,11 +24,9 @@ require('blink.cmp').setup({
 })
 require('conform').setup({
     formatters_by_ft = {
-        ["*"] = { "codespell" },
         ["_"] = { "trim_whitespace" },
         bash = { "shfmt" },
         json = { "prettier" },
-        toml = { "prettier" },
         yaml = { "prettier" },
     },
 })
@@ -38,11 +36,9 @@ require('mason').setup()
 require('mason-tool-installer').setup({
     ensure_installed = {
         'bash-language-server',
-        'codespell',
         'json-lsp',
         'marksman',
         'prettier',
-        'tombi',
         'yaml-language-server',
     }
 })

@@ -1,1 +1,1 @@
-vim.lsp.enable({ 'bashls', 'jsonls', 'marksman', 'tombi', 'yamlls' })
+vim.lsp.enable({ 'bashls', 'jsonls', 'marksman', 'yamlls' })
