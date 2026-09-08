@@ -1,9 +1,8 @@
-local opts = { noremap = false, silent = false }
-
 vim.g.mapleader = " "
 
 -- source
 vim.keymap.set('n', '<leader>u', ':update<CR> :source<CR>')
+
 -- oil
 vim.keymap.set('n', '<leader>e', ':Oil<CR>')
 
@@ -15,7 +14,7 @@ vim.keymap.set('n', '<leader>fg', ':Pick grep<CR>')
 vim.keymap.set('n', '<leader>h', ':Pick help<CR>')
 
 -- mason
-vim.keymap.set('n', 'm', ':Mason<CR>')
+vim.keymap.set('n', '<leader>m', ':Mason<CR>')
 
 -- format
 vim.keymap.set('n', '<leader>lf', function()
@@ -29,10 +28,9 @@ vim.keymap.set('n', 'x', '"_x')
 vim.keymap.set("n", "<leader>ch", ":nohl<CR>")
 
 -- center after search
-vim.keymap.set('n', 'n', 'nzzzv', opts)
-vim.keymap.set('n', 'N', 'Nzzzv', opts)
+vim.keymap.set('n', 'n', 'nzzzv')
+vim.keymap.set('n', 'N', 'Nzzzv')
 
--- zk
-vim.api.nvim_set_keymap("n", "<leader>zn", ":ZkNew { title = vim.fn.input('Title: ') }<CR>", opts)
-vim.api.nvim_set_keymap("n", "<leader>zo", "<Cmd>ZkNotes { sort = { 'modified' } }<CR>", opts)
-vim.api.nvim_set_keymap("n", "<leader>zt", "<Cmd>ZkTags<CR>", opts)
+-- ctrl backspace
+vim.keymap.set("i", "<c-bs>", "<C-W>", { noremap = true, silent = true })
+vim.keymap.set("i", "<c-bs>", "<C-W>", { noremap = true, silent = true })

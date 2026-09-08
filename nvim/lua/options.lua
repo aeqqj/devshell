@@ -1,6 +1,6 @@
 vim.o.termguicolors = true
 
-vim.o.winborder = "rounded"
+vim.o.winborder = "single"
 
 vim.o.smarttab = true
 vim.o.autoindent = true
@@ -31,5 +31,10 @@ vim.o.splitbelow = true
 vim.o.splitright = true
 vim.o.splitkeep = "cursor"
 
+vim.o.foldmethod = "indent"
+vim.o.foldlevelstart = 99
+vim.o.foldenable = true
+
+-- .opt has to be used for some reason
 vim.opt.path:append("**")
 vim.opt.wildignore:append({ "*/node_modules/*" })
